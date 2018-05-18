@@ -1,4 +1,7 @@
 {
+  "variables": {
+    "version": ""
+  },
   "provisioners": [
     {
       "type": "shell",
@@ -85,9 +88,16 @@
     }
   ],
   "post-processors": [
-    {
-      "output": "builds/{{.Provider}}-ubuntu1804.box",
-      "type": "vagrant"
-    }
+    [
+      {
+        "output": "builds/{{.Provider}}-ubuntu1804.box",
+        "type": "vagrant"
+      },
+      {
+        "type": "vagrant-cloud",
+        "box_tag": "geerlingguy/ubuntu1804",
+        "version": "{{user `version`}}"
+      }
+    ]
   ]
 }
