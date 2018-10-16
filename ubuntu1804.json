@@ -1,10 +1,8 @@
 {
   "variables": {
     "username": "",
-    "version": "",
-    "vagrant_cloud_token": "{{ env `VAGRANT_CLOUD_TOKEN` }}"
+    "version": ""
   },
-  "sensitive-variables": ["vagrant_cloud_token"],
   "provisioners": [
     {
       "type": "shell",
@@ -99,7 +97,6 @@
       {
         "type": "vagrant-cloud",
         "box_tag": "{{user `username`}}/ubuntu1804",
-        "access_token": "{{ user `vagrant_cloud_token` }}",
         "version": "{{user `version`}}"
       }
     ]
