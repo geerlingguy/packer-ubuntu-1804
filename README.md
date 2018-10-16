@@ -29,16 +29,16 @@ Then, follow one or the other procedures below, depending on whether you want to
 
 This Packer configuration includes a post-processor that pushes the built box to Vagrant Cloud.  This requires some preparation:
 
-* Create a [Vagrant Cloud account](https://app.vagrantup.com/account/new).  Sign in.
-** Select _Create a new Vagrant Box_
-** Create a box named "ubuntu1804"
-** Create an access token.  Copy it to your clipboard as it will be displayed only once.
-* Create environment variable `VAGRANT_CLOUD_TOKEN` whose value is your token:
+  - Create a [Vagrant Cloud account](https://app.vagrantup.com/account/new).  Sign in.
+    - Select _Create a new Vagrant Box_
+    - Create a box named "ubuntu1804"
+    - Create an access token.  Copy it to your clipboard as it will be displayed only once.
+  - Create environment variable `VAGRANT_CLOUD_TOKEN` whose value is your accesstoken:
     ```
     export VAGRANT_CLOUD_TOKEN=ab44...95ef
     ```
 
-Change directory to the directory containing this `README.md` file and run Packer, specifying your Vagrant Cloud username and a new version number for this Vagrant box:
+Change directory to the directory containing the `ubuntu1804.json` file and run Packer, specifying your Vagrant Cloud username and a new version number for this Vagrant box:
 
     $ packer build -var "username=yourVagrantCloudUsername" -var 'version=1.2.0' ubuntu1804.json
 
@@ -48,7 +48,7 @@ After a few minutes, Packer should tell you the box was generated successfully, 
 
 If you do not care to push your box to Vagrant Cloud, you can just remove the `vagrant-cloud` post-processor from the end of the Packer configuration file `ubuntu1804.json`.  Further, since user variables `username` and you need not specify a `version` value on the Packer command line.
 
-Then, change directory to the directory containing this `README.md` file and run Packer:
+Then, change directory to the directory containing the `ubuntu1804.json` file and run Packer:
 
     $ packer build ubuntu1804.json
 
