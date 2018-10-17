@@ -33,7 +33,7 @@ This Packer configuration includes a post-processor that pushes the built box to
     - Select _Create a new Vagrant Box_
     - Create a box named "ubuntu1804"
     - Create an access token.  Copy it to your clipboard as it will be displayed only once.
-  - Create environment variable `VAGRANT_CLOUD_TOKEN` whose value is your accesstoken:
+  - Create environment variable `VAGRANT_CLOUD_TOKEN` whose value is your access token:
     ```
     export VAGRANT_CLOUD_TOKEN=ab44...95ef
     ```
@@ -46,7 +46,10 @@ After a few minutes, Packer should tell you the box was generated successfully, 
 
 ### Skip upload to Vagrant Cloud
 
-If you do not care to push your box to Vagrant Cloud, you can just remove the `vagrant-cloud` post-processor from the end of the Packer configuration file `ubuntu1804.json`.  Further, since user variables `username` and you need not specify a `version` value on the Packer command line.
+If you do not care to push your box to Vagrant Cloud, edit the Packer configuration file `ubuntu1804.json`:
+
+* Remove the `vagrant-cloud` post-processor from the end of the file
+* Remove the user `variables` section at the beginning of the file, so that you need not set the variables on the command line
 
 Then, change directory to the directory containing the `ubuntu1804.json` file and run Packer:
 
