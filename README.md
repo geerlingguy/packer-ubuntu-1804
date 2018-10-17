@@ -25,7 +25,7 @@ Make sure all the required software (listed above) is installed.
 
 Then, follow one or the other procedures below, depending on whether you want to upload the Vagrant box to Vagrant Cloud.
 
-### Upload to Vagrant Cloud
+### With upload to Vagrant Cloud
 
 This Packer configuration includes a post-processor that pushes the built box to Vagrant Cloud.  This requires some preparation:
 
