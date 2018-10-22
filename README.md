@@ -18,6 +18,7 @@ The following software must be installed/present on your local machine before yo
   - [Vagrant](http://vagrantup.com/)
   - [VirtualBox](https://www.virtualbox.org/) (if you want to build the VirtualBox box)
   - [Ansible](http://docs.ansible.com/intro_installation.html)
+  - nfsd.  Be careful to not accidentally also install NIS--in the absence of an NIS server, this will cause your computer to become very slow.
 
 ## Usage
 
