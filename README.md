@@ -93,13 +93,13 @@ After a few minutes, Packer should tell you the box was generated successfully.
 
 ### Run
 
-The included `Vagrantfile` allows quick testing of the built Vagrant boxes. From this same directory, run the following command after building the box:
+The included `Vagrantfile` allows quick testing of the built Vagrant boxes. From the same directory, run the following command after building the box:
 
     $ vagrant up
 
 Open a terminal session with the Vagrant box:
 
-    $ vagrant ssh
+    $ vagrant ssh
 
 Observe  how the host directory containing `ubuntu1804.json` is mounted on `/vagrant`:
 
