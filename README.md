@@ -76,7 +76,7 @@ Delete the box and all associated files except `Vagrantfile`:
 This concludes the procedure to create a Vagrant Box, upload it to Vagrant Cloud and run it.
 
 
-### Usage without upload to Vagrant Cloud
+## Usage without upload to Vagrant Cloud
 
 ### Build
 
@@ -91,7 +91,7 @@ Then, change directory to the directory containing the `ubuntu1804.json` file an
 
 After a few minutes, Packer should tell you the box was generated successfully.
 
-## Run
+### Run
 
 The included `Vagrantfile` allows quick testing of the built Vagrant boxes. From this same directory, run the following command after building the box:
 
